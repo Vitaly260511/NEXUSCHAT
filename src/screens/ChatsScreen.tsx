@@ -88,3 +88,4 @@ const styles = StyleSheet.create({
   modalButtonPrimary: { backgroundColor: "#2AABEE" },
   modalButtonText: { color: "#FFF", fontSize: 16, fontWeight: "bold" },
 });
+

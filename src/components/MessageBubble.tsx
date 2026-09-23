@@ -26,3 +26,4 @@ const styles = StyleSheet.create({
   time: { color: "#708499", fontSize: 11, marginRight: 4 },
   check: { color: "#2AABEE", fontSize: 12 },
 });
+

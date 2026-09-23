@@ -42,3 +42,4 @@ const styles = StyleSheet.create({
   label: { color: "#FFF", fontSize: 16 },
   info: { color: "#708499", fontSize: 14, textAlign: "center", marginBottom: 5 },
 });
+

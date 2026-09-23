@@ -140,3 +140,4 @@ const styles = StyleSheet.create({
   modalBtn: { padding: 12, borderTopWidth: 1, borderTopColor: "#101921" },
   modalBtnText: { color: "#FFF", fontSize: 16, textAlign: "center" },
 });
+

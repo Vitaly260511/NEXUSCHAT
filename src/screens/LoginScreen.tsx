@@ -29,3 +29,4 @@ const styles = StyleSheet.create({
   buttonText: { color: "#FFF", fontSize: 18, fontWeight: "bold" },
   link: { color: "#2AABEE", textAlign: "center", marginTop: 25, fontSize: 16 },
 });
+

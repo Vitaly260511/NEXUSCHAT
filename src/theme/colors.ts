@@ -1,0 +1,1 @@
+﻿export const colors = { primary: "#2AABEE", dark: { background: "#17212B", surface: "#0E1621", card: "#1C2733", text: "#FFFFFF", textSecondary: "#708499", border: "#101921", messageOut: "#2B5278", messageIn: "#182533" } };

@@ -1,0 +1,14 @@
+﻿import axios from "axios";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+const API_URL = "https://skarychat.onrender.com";
+const api = axios.create({ baseURL: API_URL, timeout: 10000 });
+api.interceptors.request.use(async (config) => { const token = await AsyncStorage.getItem("token"); if (token) config.headers.Authorization = `Bearer ${token}`; return config; });
+export const register = async (email, password) => { const res = await api.post("/api/register", { email, password }); return res.data; };
+export const login = async (email, password) => { const res = await api.post("/api/login", { email, password }); await AsyncStorage.setItem("token", res.data.access_token); return res.data; };
+export const getMe = async () => { const res = await api.get("/api/me"); return res.data; };
+export const logout = async () => { await AsyncStorage.removeItem("token"); };
+export const getChats = async () => { const res = await api.get("/api/chats"); return res.data; };
+export const createChat = async (name, members = [], isChannel = false) => { const res = await api.post("/api/chats", { name, members, is_channel: isChannel }); return res.data; };
+export const getMessages = async (chatId) => { const res = await api.get(`/api/messages/${chatId}`); return res.data; };
+export const sendMessage = async (chatId, text) => { const res = await api.post("/api/messages", { chat_id: chatId, text }); return res.data; };
+export default api;
